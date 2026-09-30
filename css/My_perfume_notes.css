@@ -1,0 +1,305 @@
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container .Main-text,
+.container .Main-text1,
+.container .Main-text2 {
+  margin: 0px 0; 
+}
+  .Main-image {
+    background-image: url(../image/My_perfume_note_main.jpg);
+    background-repeat: repeat;
+    max-width: 1920px;
+    height: 775px;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    margin: 0;
+    
+  }
+  .container .Main-text {
+    font-size: 64px;
+    color: white;
+    margin-bottom:24px ;
+    margin-top: 280px;
+  }
+  
+.container .Main-text1 {
+  font-size: 30px;
+  color: white;
+  margin-bottom:50px ;
+}
+
+.container .Main-text2 {
+  font-size: 20px;
+  color: white;
+  margin-bottom:80px ;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.arrow {
+  color: white;
+  opacity: 0;
+  animation: fadeInDown 1.5s infinite;
+}
+.arrow img{
+  width: 28px;
+}
+
+.arrow:nth-child(1) {
+  animation-delay: 0s;
+}
+.arrow:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.arrow:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
+.background-img{
+  background-image: url(../image/my_note_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3920px;
+}
+
+.intro{
+padding-top: 150px;
+
+}
+.intro h1{
+font-size: 48px;
+color: #212121;
+margin-bottom: 24px;
+
+}
+
+.intro p{
+  font-size: 20px;
+  color: #757575;
+
+  }
+
+.intro, .fragrance-time, .custom {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.right {
+  display: flex;
+  gap: 180px;
+}
+.image-text img {
+  width: 100%;
+  max-width: 626px;
+  height: 491px;
+}
+.intro-text {
+  flex: 1;
+}
+.note-container {
+  margin-bottom: 24px; 
+}
+.note-header {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+}
+.note-number {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  background-color: #EFECE7;
+  color: #34181b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 22px;
+  font-weight: bold;
+}
+.note-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #212121;
+}
+
+.note-description {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #616161;
+  margin-left: 76px;
+  line-height: 22px;
+}
+.note-example {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #616161;
+  margin-left: 76px;
+}
+
+.fragrance-time {
+  display: flex;
+  gap: 94px;
+  align-items: center;
+  padding-top: 250px;
+}
+.fragrance-time img {
+  max-width: 667px;
+
+}
+.fragrance-time h2{
+font-size: 46px;
+color: #484848;
+}
+.fragrance-time p {
+  font-size: 30px;
+  line-height: 50px;
+  color: #484848;
+}
+
+.perfume-container {
+
+  width: 1440px;
+  margin: 150px auto;
+  display: flex;
+ background-image: url(../image/youtube_back.png);
+
+}
+
+.perfume-left {
+width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfume-left img {
+  width: 100%;
+  height: 557px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+.perfume-right {
+ width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-left: 60px;
+}
+
+.perfume-right small {
+  font-size: 25px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.perfume-right h1 {
+  font-size: 60px;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.perfume-right p {
+  font-size: 20px;
+  color: #777;
+}
+
+
+.section-season{
+  max-width: 1440px;
+  height: 360px;
+  background-image: url('../image/season-container.png');
+  margin: 0 auto;
+}
+.season-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: block;
+  text-align: left;
+  color: #493D24;
+  background-size: cover;
+  background-position: center;
+}
+.season-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.season-title-wrapper p{
+  font-size: 30px;
+}
+.season-title-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #4a3b28;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.season-title {
+  font-size: 60px;
+  margin: 0;
+  border-bottom: none;
+}
+.season-description {
+  font-size: 16px;
+}
+.season-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.season-horizontal-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #4a3b28;
+  margin-right: 10px;
+}
+.season-button {
+  padding: 10px 77px;
+  font-size: 25px;
+  border-radius: 50px;
+  background-color: #c4b6a3;
+  color: #493D24;
+  text-decoration: none;
+  border: 1px solid #493D24;
+  white-space: nowrap;
+  transition: all 0.3s ease; 
+  cursor: pointer;
+}
+
+.season-button:hover {
+  background-color: #493D24; 
+  color: #c4b6a3;
+}

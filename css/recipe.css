@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'BookkMyungjo-Bd', serif;
+  margin: 0 auto;
+  max-width: 1920px;
+  background-repeat: no-repeat;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container { 
+    width: 100%;
+    height: auto;
+    background-image: url("../image/allback.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 100px;
+	padding-top: 100px;
+  }
+
+.container2 {
+  display: flex;
+}
+#title {
+  color: #20263f;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  display: block;
+  text-align: center;
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .recipe-title {
+    margin-bottom: 20px;
+  }
+  .note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .note-type1 {
+    font-weight: bold;
+    color: #E63946;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 22px;
+  }
+    .note-type2 {
+    font-weight: bold;
+    color: #6A0572;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 22px;
+  }
+    .note-type3 {
+    font-weight: bold;
+    color: #355C7D;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 22px;
+  }
+  .note-description {
+    color: #000000;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+
+  }
+  
+  .note-value {
+    color: #000000;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+.cards {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  perspective: 1000px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 500px;
+  margin-top: 50px;
+  width: 1600px;
+  margin-left: 150px;
+  
+}
+
+.cards__single {
+  background: #ffbeb5;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width:80%;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  position: relative;
+transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
+  
+}
+
+.cards__image {
+  text-align: center;
+  width: 90%;
+  
+}
+
+.cards__single.flip {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.cards__artist,
+.cards__album {
+  color: #20263f;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+
+
+.spring {
+    background: linear-gradient(180deg, rgba(252, 231, 236, 0.9), rgba(254, 254, 254, 0.4));
+  }
+  
+  .summer {
+    background: linear-gradient(180deg, rgba(255, 247, 217, 0.9), rgba(254, 254, 254, 0.4));
+  }
+  
+  .autumn {
+    background: linear-gradient(180deg, rgba(251, 232, 219, 0.9), rgba(254, 254, 254, 0.4));
+  }
+  
+  .winter {
+    background: linear-gradient(180deg, rgba(229, 237, 253, 0.9), rgba(254, 254, 254, 0.4));
+  }
+
+.cards__album {
+  font-style: italic;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+}
+h3 {
+    font-size: 35px;
+    margin-bottom: 25px;
+    margin-left: 150px;
+}
+h4 {
+    font-size: 30px;;
+    color: #676767;
+    margin-left: 150px;
+}
+
+li {
+  line-height: 21px;
+}
+
+.cards__front,
+.cards__back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.cards__front {
+  height: 100%;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+   display: flex;
+  justify-content: center; /* 啊肺 啊款单 */
+  align-items: center;     /* 技肺 啊款单 */
+}
+
+.cards__back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 30px;
+  color: #20263f;
+  font-size: 20px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+.btn {
+    padding: 10px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #222;
+    color: #222;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin-right: 40px;
+    margin-top: 100px;
+    text-align: center; 
+}
+
+
+  .btn:hover {
+background-color: #222; 
+color: white;
+cursor: pointer; 
+  }
+
+
+@media (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    position: relative;
+    perspective: 1000px;
+    align-items: stretch;
+  }
+  .cards__single {
+    width: 20%;
+  }
+}

@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.body {
+font-family: 'BookkMyungjo-Bd', serif;
+}
+
+.container { 
+  width: 100%;
+}
+.container1 {
+  width: 100%;
+  display: flex;
+}
+
+
+.sidebar {
+  width: 300px;
+  margin-left: 200px;
+  height: auto;
+  margin-top: 70px;
+  border-right: 2px solid #ccc ;
+}
+.sidebar h3 {
+  margin: 0px 0px 70px 20px;
+  padding-top: 80px;
+  font-size: 35px;
+}
+.mypage_side {
+  list-style: none;
+  padding: 0;
+}
+.mypage_side li {
+  padding: 10px 0;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 70px;
+  opacity: 0.5;
+}
+.mypage_side a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.mypage_side a:hover {
+  font-weight: bold;
+}
+.mypage_side img {
+  width: 40px;
+  height: 40px;
+  margin-right: 30px;
+}
+.Review-con {
+  width: 1000px;
+  height: auto;
+  margin-top: 70px;
+  margin-left: 200px;
+}
+.Review-con p {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+.profile {
+  display: flex;
+  gap: 500px;
+}
+.profile h1 {
+  font-size: 40px;
+  margin: 0px 0px 30px 0px;
+}
+.profile img {
+  width: 60px;
+  height: 60px;
+  margin-top: 0px;
+
+}
+.bell_user {
+  display: flex;
+  margin-left: 120px;
+
+}
+.bell_user img {
+  width: 30px;
+  height: 30px;
+  margin: 0px 10px 0px 0px;
+}
+
+.form-group {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.review-container {
+  width: 1040px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+h2 {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #484848;
+  
+}
+.tabs-box {
+  border-radius: 20px;
+  padding: 30px 30px 20px 16px;
+  background-color: #EFEFEF;
+  position: relative;
+  height: auto;
+}
+.tabs {
+  position: relative;
+  display: flex;
+  margin-left: 10px;
+  top: 0px;
+    height: auto;
+}
+.tabs button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  cursor: pointer;
+  padding-bottom: 16px;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+.tabs button.active {
+
+  color: #484848;
+  font-weight: bold;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #484848;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.tabs button:nth-child(2).active ~ ::after {
+  transform: translateX(100%);
+}
+.review-card {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.review-card:nth-child(1){
+  margin-top: 38px;
+}
+.review-card img {
+  width: 107px;
+  height: 94px;
+  border-radius: 6px;
+  margin-right: 24px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.review-info {
+  flex: 1;
+}
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.review-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+.product-type{
+  font-size: 18px;
+  font-weight: bold;
+  color: #484848;
+  margin-right: 20px;
+}
+.reviews {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 20px;
+}
+.star {
+font-size: 16px;
+color: #333;
+}
+.span{
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.write:hover{
+  text-decoration: underline;
+}
+
+.product-name{
+  font-size: 18px;
+  font-weight: bold;
+  color: #484848;
+  margin-top: 0px;
+  margin-left: 12px;
+}
+
+.btn {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+.btn-edit {
+  background-color: #9A9A9A;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-edit:hover {
+  background-color: #7A7A7A;
+  color: #e0e0e0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-delete {
+  background-color: #E8EAEC;
+  color: #484848;
+  transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #D0D3D6;
+  color: #2C2C2C;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.product-options{
+  display: flex;
+  
+}
+.product-option{
+  margin-top: 8px;
+  margin-right: 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.reiew-img img{
+  width: 1050px;
+  height: 200px;
+}

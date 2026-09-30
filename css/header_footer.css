@@ -1,0 +1,545 @@
+@font-face {
+  font-family: 'BookkMyungjo-Bd';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'BookkMyungjo-Bd', serif;  
+max-width: 1920px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+}
+/* 기본 스타일 */
+.header {
+  background-color: black;
+  color: white;
+  transition: background-color 2s ease-in-out;
+}
+.hamburger img {
+width: 30px;
+}
+
+/* 계절 테마 */
+.header.spring {
+  background-color: #EB8BB4;
+}
+.header.summer {
+  background-color: #53AC6A;
+}
+.header.autumn {
+  background-color: #EDB257;
+}
+.header.winter {
+  background-color: #77A2C3;
+}
+
+.icon-bar {
+ padding-top:26px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-container {
+  padding-right: 297px;
+  display: flex;
+  gap: 42px;
+}
+
+.input-search {
+  font-size: 17px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  width: 0; 
+  opacity: 0;  
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.input-search.active {
+  width: 250px; 
+  opacity: 1;
+}
+
+
+.input-search::placeholder {
+  font-size: 17px;
+}
+
+
+.icon {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.header-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.nav-bar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 390px; 
+  top:24px;
+  z-index: 10;
+}
+.logo img{
+  width: 100px;
+  height: 100px;
+
+}
+
+.menu-container {
+  padding-bottom: 30px;
+  flex-grow: 1; 
+  display: flex;
+  justify-content: center;
+  max-width: 1162px;
+  cursor: pointer;
+
+}
+
+
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 60px; 
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.submenus {
+  height: 157px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color:rgba(217, 217, 217, 0.55);
+  padding: 16px 0;
+  z-index: 99;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  display: flex;
+  text-align: center;
+  padding: 0;
+}
+
+.submenus.active {
+  margin-left: 0px;
+  max-height: 157px;
+  opacity: 1;
+}
+.submenu:nth-child(1){
+  margin-right:39px;
+}
+.submenu:nth-child(2){
+  margin-right:39px;
+}
+.submenu:nth-child(3){
+  margin-right:39px;
+}
+.submenu:nth-child(4){
+  margin-right:30px;
+}
+.submenu:nth-child(5){
+  margin-right:35px;
+}
+.submenu:nth-child(6){
+  margin-right:30px;
+}
+.menu-item:hover .submenus {
+  display: flex;
+}
+
+.nav-bar:active .submenus {
+  display: flex;
+  justify-content: center;
+
+}
+
+.submenu {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 30px;
+  cursor: pointer;
+}
+
+.submenu a {
+  color: #000;
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.submenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #585858;
+  transition: width 0.3s ease-in-out;
+}
+
+.submenu a:hover::after {
+  width: 100%;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  height: auto; /* 고정 높이 제거 */
+  padding: 40px 20px; /* 모바일에서 내부 패딩 조정 */
+}
+
+.footer-container {
+  padding-top: 70px;
+  padding-left: 128px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: 132px;
+}
+
+.footer-logo p {
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-links {
+  display: flex;
+}
+
+
+.footer-column h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 35px;
+}
+
+.footer-social a {
+  margin-right: 24px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(224, 226, 230, 1);
+  width: 100%;
+  margin: 40px auto 0 auto;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.col1 {
+  margin-right: 64px;
+}
+
+.col2 {
+  margin-right: 107px;
+}
+
+
+
+/* 햄버거 버튼 */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .icon-bar {
+    padding-top: 16px;
+    justify-content: center;
+  }
+
+  .icon-container {
+    padding-right: 0;
+    gap: 20px;
+  }
+
+  .input-search.active {
+    width: 180px;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .logo {
+    padding-left: 24px;
+   margin-right: 180px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .hamburger {
+    margin-top: 40px;
+    display: block;
+    padding-right: 24px;
+  }
+
+  .menu-container {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .menu-container.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    width: 768px;
+  }
+  .menu-item {
+    position: relative;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  /* 기본 밑줄 숨김 상태 */
+  .menu-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* 중앙 기준 */
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.4s ease;
+  }
+  
+  /* 호버 시 밑줄 확장 */
+  .menu-item:hover::after {
+    width: 100%;
+  }
+ 
+
+  .col1, .col2 {
+    margin-right: 0; 
+  }
+
+  .footer {
+    width: 100%; 
+    padding: 40px 20px; 
+  }
+  
+  .header__toggle{
+    display: block;
+   }
+   
+  .header {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+  .logo {
+    height: 80px;
+    position: static;
+    transform: none;
+  }
+  .icon-section {
+    padding-bottom: 20px;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .header_toggle_img{
+   width: 24px;
+  }
+
+  .nav-menu.open{
+    display: flex;
+  }
+
+  .footer-container {
+    width: 100%; /* 푸터 컨테이너도 100% 넓이 */
+    display: flex;
+    flex-direction: column; /* 모바일에서 세로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    justify-content: center; /* 세로로 가운데 정렬 */
+    padding: 20px; /* 좌우 패딩 줄이기 */
+    text-align: center; /* 자식 요소들 가운데 정렬 */
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 10px; /* 컬럼 간격 줄이기 */
+ 
+  }
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+.footer-logo p {
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+ 
+}
+
+.footer-links {
+  display: flex;
+  align-items: center; /* 가운데 정렬 */
+}
+
+.footer-column h3 {
+  font-size: 16px; /* 제목 크기 조정 */
+  margin-bottom: 10px; /* 제목 아래 간격 줄이기 */
+  cursor: pointer; /* 클릭 가능하도록 */
+}
+
+.footer-column ul {
+  display: none; /* 기본적으로 숨기기 */
+  padding: 0;
+  margin: 0;
+
+}
+
+.footer-column ul li {
+  margin-bottom: 5px; /* 리스트 간격 줄이기 */
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 35px;
+
+}
+
+.footer-social a {
+  margin-right: 24px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(224, 226, 230, 1);
+  width: 100%;
+  margin: 40px auto 0 auto;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #ccc;
+
+}
+
+}

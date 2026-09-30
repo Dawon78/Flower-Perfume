@@ -1,0 +1,100 @@
+.login-container{
+  width: 100%;
+display: flex;
+margin: 154px auto; /* 가운데 정렬 */
+justify-content: center; /* 가로 중앙 정렬 */
+align-items: center; /* 세로 중앙 정렬 */
+gap:160px;
+}
+
+.login-box {
+width: 388px;
+}
+
+.separator {
+    width: 1px;
+    height: 350px; /* 선의 길이 조절 */
+    background-color: #313957; /* 검은색 */
+    align-self: stretch; /* 부모 높이에 맞춤 */
+}
+.subtitle {
+font-size: 18px;
+color: #313957;
+margin-bottom: 48px;
+font-family:'TmoneyRoundWindExtraBold';
+}
+
+.login-container form {
+display: flex;
+flex-direction: column;
+}
+.login-container label{
+font-size: 16px;
+margin-bottom: 8px;
+color: #0C1421;
+}
+.login-container input {
+padding: 16px 0px 16px 16px;
+margin-bottom: 24px;
+border: 1px solid #D4D7E3;
+background-color: #F7FBFF;
+border-radius: 12px;
+font-size: 16px;
+}
+
+.forgot-password{
+text-align: right;
+font-size: 16px;
+float: right;
+margin-bottom: 24px;
+}
+input::placeholder{
+font-size: 16px;
+color: #8897AD;
+}
+.forgot-password:hover{
+color: #566C78;
+}
+.sign-in {
+padding: 16px;
+border: none;
+background: #162D3A;
+color: white;
+border-radius: 12px;
+cursor: pointer;
+font-size: 20px;
+margin-bottom: 48px; 
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+.sign-in:hover {
+background: #566C78;
+}
+.login-container .or {
+text-align: center;
+margin:0;
+margin-bottom: 24px;
+}
+
+
+.login-container .signup{
+text-align: center;
+font-size: 18px;
+margin-bottom: 137px;
+}
+.login-container .p{
+font-size: 16px;
+color: #959CB6;
+text-align: center;
+}
+
+.sing-up:hover{
+color: #313957;
+}
+
+.go-back{
+  text-align: center;
+  color: #333;
+}
+.go-back:hover{
+  color: #777;
+}

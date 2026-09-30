@@ -1,0 +1,353 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 100%;
+	font-family: 'BookkMyungjo-Bd', serif;
+}
+
+.container { 
+    width: 100%;
+}
+
+.join {
+    width: 1000px;
+    height: 800px;
+    margin: 80px 150px 0px 450px;
+    border: none;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 15px 5px 30px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+
+}
+
+.join_image {
+    width: 400px;
+    height: 800px;
+    border-radius: 30px;
+    border-left: none;
+    position: relative; 
+    display: inline-block;
+}
+
+.join_image img {
+    object-fit: cover;
+    overflow: hidden;
+    max-width: 500px;
+    max-height: 800px;
+    border-radius: 30px;
+    display: block;
+
+}
+
+.membership {
+    margin-left: 50px;
+    width: 600px;
+    height: 800px;
+}
+
+.membership img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.logo_membership {
+    margin: 40px 0px 0px 40px;
+    padding: 0;
+    display: flex;
+}
+.logo_membership h1 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+[type="number"] {
+    width: 60px;
+    height: 20px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 0px;
+}.form-group {
+    display: flex;
+    padding: 10px 0;
+    margin-left: 80px;
+}
+
+.form-group label {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: #757575;
+    text-align: right;
+    margin-bottom: 2px;
+}
+
+.form-group input[type="text"] {
+    width: 150px;
+    height: 20px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    margin-left: 40px;
+}
+
+.form-group input[type="password"] {
+    width: 150px;
+    height: 20px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    margin-left: 30px;
+}
+
+.form-group input[type="name"] {
+    width: 150px;
+    height: 20px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    margin-left: 52px;
+}
+.check-id-btn {
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    color: #5a5a5a;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+
+.form-group-hr {
+    margin: 10px 0px 10px 80px;
+    padding: 0px;
+    border: none;
+    background-color: black;
+    box-shadow: none;
+    height: 0.3px;
+    opacity: 0.3;
+    width: 400px;
+}
+
+.phone-group {
+    display: flex;
+    align-items: center;
+}
+
+.phone-group select{
+    width: 60px;
+    height: 25px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin-left: 12px
+}
+.phone-group input[type="tel"] {
+    width: 60px;
+    height: 20px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin-left: 0;
+}
+
+.phone-group p {
+    margin: 0px 5px 5px 5px;
+}
+
+.birthdate-group input
+
+.birthdate-group span {
+    font-size: 12px;
+    color: #5a5a5a;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-group input[type="email"] {
+    width: 100px;
+    height: 20px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+
+
+.email-group {
+    font-size: 13px;
+    margin-left: 40px;
+}
+
+.email-group select{
+    width: 85px;
+    height: 25px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin-left: 0px
+}
+
+.email-select option {
+    font-size: 13px;
+    font-weight: bold; 
+    color: #ccc;
+}
+
+.form-group input[type="radio"] {
+    width: 10px;
+    height: 10px;
+}
+
+.gender-group {
+    font-size: 13px;
+    display: flex;
+    margin-left: 50px;
+    gap: 10px;
+}
+
+.insertmember {
+    margin-left: 80px;
+    width: 400px;
+    height: 100px;
+}
+
+.insertmember a {
+    color: inherit;             
+    text-decoration: none; 
+    font-size: 13px;
+    margin-left: 100px;
+    color: #444;      
+}
+
+.insertmember a:hover {               
+    text-decoration: underline;  
+}
+
+.signup-btn {
+    background-color: black; 
+    color: white;           
+    padding: 10px 30px;       
+    border: none;              
+    border-radius: 50px;       
+    font-size: 16px;           
+    cursor: pointer;  
+    width: 380px;
+    height: 40px;     
+    margin-left: 10px;
+    margin-top: 20px; 
+    margin-bottom: 10px;    
+    transition: background-color 0.3s; 
+}
+
+.signup-btn:hover {
+    background-color: black;  
+}
+
+
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    height: 457px;
+    margin-top: 80px;
+  
+  }
+  
+  .footer-container {
+  padding-top: 70px;
+  padding-left: 128px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  margin-right: 132px;
+  }
+  
+  .footer-logo p {
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  /* 링크 섹션 */
+  .footer-links {
+    display: flex;
+  }
+  
+  /* 각 컬럼 스타일 */
+  .footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 28px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 소셜 아이콘 */
+  .footer-social {
+    margin-top: 35px;
+  }
+  
+  .footer-social a {
+    margin-right: 24px;
+  }
+  
+  .footer-social img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-bottom {
+  border-top: 1px solid rgba(224, 226, 230, 1);
+  width: 1820px;
+  margin: 40px auto 0 auto;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #ccc;
+  }
+  
+  .col1{
+  margin-right: 64px;
+  }
+  .col2{
+  margin-right: 107px;
+  }

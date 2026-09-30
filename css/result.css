@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'GowunBatang-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.body {
+font-family: 'BookkMyungjo-Bd', serif;
+}
+#result {
+  display: none;
+  max-width: 1400px;
+  text-align: center;
+  background-image: url(../image/preference_result.png);
+  color: #ffffff;
+  background-repeat: no-repeat;
+}
+
+#share-result {
+  margin: auto;
+  width: 390px;
+  text-align: center;
+}
+#resultImg{
+  width: 459px;
+  margin: 0 auto;
+}
+
+.resultNameID{
+  color: #fff;
+  font-size: 40px;
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+.resultCologne {
+  font-size: 50px;
+  margin-bottom: 72px;
+}
+
+.resultDesc {
+  margin: 0 auto;
+  font-size: 40px;
+  line-height: 108px;
+}
+
+#result button{
+  margin-top: 72px;
+  width: 520px;
+  height: 85px;
+  color: #BF996C;
+  background-color: transparent;
+  font-size: 40px;
+  border: 1px solid #BF996C;
+  transition: all 0.3s ease;
+}
+#result button:hover{
+  background-color: #BF996C;
+  color: #000;
+}
+
+.img-fluid {
+  width: 80%;
+  margin-top: 5em;
+}

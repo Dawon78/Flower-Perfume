@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.body {
+font-family: 'BookkMyungjo-Bd', serif;
+}
+
+.login-container{
+  max-width: 1234px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 414px;
+  display: flex;
+}
+
+.login-box {
+  width: 388px;
+  margin-right: 174px;
+  margin-top: 20px;
+}
+.image-box {
+  width: 672px;
+  
+  background: url('/img/Art.png') center/cover no-repeat;
+}
+.image-box img {
+    width: 500px; /* 원하는 너비 */
+    height: 700px; /* 비율에 맞게 높이 자동 조절 */
+}
+.subtitle {
+  font-size: 18px;
+  color: #313957;
+  margin-bottom: 48px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+.login-container label{
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #0C1421;
+}
+.login-container input {
+  padding: 16px 0px 16px 16px;
+  margin-bottom: 24px;
+  border: 1px solid #D4D7E3;
+  background-color: #F7FBFF;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.forgot-password{
+  text-align: right;
+  font-size: 16px;
+  float: right;
+  margin-bottom: 24px;
+}
+input::placeholder{
+  font-size: 16px;
+  color: #8897AD;
+}
+.forgot-password:hover{
+  color: #566C78;
+}
+.sign-in {
+  padding: 16px;
+  border: none;
+  background: #162D3A;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 10px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.sign-in:hover {
+  background: #566C78;
+}
+.login-container .or {
+  text-align: center;
+  margin:0;
+  margin-bottom: 24px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #313957;
+  transition: 0.3s;
+  background-color: #F3F9FA;
+  padding: 12px;
+}
+.social-button img {
+  width: 28px;
+  height: 28px;
+  margin-right: 16px;
+}
+
+.social-button:hover {
+  transform: scale(1.05);
+}
+
+.login-container .google{
+  margin-bottom: 16px;
+}
+
+.login-container .facebook{
+margin-bottom: 48px;
+}
+
+.login-container .signup{
+  text-align: center;
+font-size: 18px;
+margin-bottom: 40px;
+}
+.login-container .p{
+  font-size: 16px;
+  color: #959CB6;
+  text-align: center;
+}
+
+.sing-up:hover{
+color: #313957;
+}

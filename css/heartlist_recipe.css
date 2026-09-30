@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'CookieRun-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.recipe-container {
+  display: flex;
+  align-items: center;
+  max-width: 1405px;
+  margin: 97px auto 138px;
+
+}
+.left {
+  width: 396px;
+  margin-right: 302px;
+}
+.right {
+  width: 774px;
+}
+.recipe-title {
+  font-size: 38px;
+  color: #484848;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.add-recipe {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 80px;
+  
+}
+.add-recipe-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: #9A9A9A;
+  border-radius: 50%;
+  font-size: 40px;
+
+  color: #ffffff;
+  text-align: center;
+  line-height: 1;
+}
+
+
+.add-recipe-text strong {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #484848;
+  margin-bottom: 5px;
+}
+.add-recipe-text span {
+  font-size: 14px;
+  color: #9A9A9A;
+}
+.recipe-list {
+  list-style: none;
+  padding: 0;
+}
+.recipe-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #9A9A9A;
+}
+.profile-info {
+font-size: 18px;
+  font-weight: bold;
+  color: #484848;
+  margin-bottom: 5px;
+}
+.profile-info span {
+font-size: 14px;
+color: #9A9A9A;
+}
+.right img {
+  width: 100%;
+  display: block;
+}
+.link-right{
+  font-family: 'CookieRun-Regular';
+  font-size: 22px;
+cursor: pointer;
+}

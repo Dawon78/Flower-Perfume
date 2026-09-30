@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커스텀 꽃향수</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .main-container { display: flex; justify-content: center; align-items: center; gap: 50px; margin-top: 20px; }
+        .controls { text-align: left; }
+        .perfume-bottle { 
+            position: relative; 
+            width: 100px; 
+            height: 150px; 
+            border: 2px solid #333; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            background: transparent;
+            transition: background 0.5s ease-in-out;
+        }
+        .water { 
+            position: absolute; 
+            bottom: 0; 
+            width: 100%; 
+            height: 0%; 
+            background: transparent;
+            transition: height 1s ease-in-out, background 0.5s ease-in-out;
+        }
+        .reset-button { 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            transition: background-color 0.5s ease;
+        }
+        #scentDisplay {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>커스텀 꽃향수</h1>
+    <div class="main-container">
+        <form id="perfumeForm" action="submitScent.jsp" method="POST">
+            <div class="controls">
+                <div>
+                    <label>메인 향 선택:</label>
+                    <select id="mainScent" name="mainScent">
+                        <option value="spring">봄</option>
+                        <option value="summer">여름</option>
+                        <option value="autumn">가을</option>
+                        <option value="winter">겨울</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>탑 노트</h3>
+                    <select id="topNotes" name="topNotes">
+                      <option>없음</option>
+                      <option>벚꽃</option>
+                      <option>목련</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>미들 노트</h3>
+                    <select id="middleNotes" name="middleNotes"></select>
+                </div>
+                <div>
+                    <h3>베이스 노트</h3>
+                    <select id="baseNotes" name="baseNotes"></select>
+                </div>
+                <div id="scentDisplay">선택된 향이 없습니다.</div>
+                <button class="reset-button" id="resetButton" type="button">초기화</button>
+                <button class="reset-button" type="submit">제출하기</button>
+            </div>
+            <div class="perfume-bottle">
+                <div class="water" id="water"></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scentData = {
+                spring: { top: ["없음", "벚꽃", "목련"], middle: ["없음", "라일락", "튤립"], base: ["없음", "머스크", "샌달우드"] },
+                summer: { top: ["없음", "레몬 블라썸", "자몽꽃"], middle: ["없음", "자스민", "라벤더"], base: ["없음", "코코넛", "바다 소금"] },
+                autumn: { top: ["없음", "오렌지 블라썸", "국화"], middle: ["없음", "장미", "해바라기"], base: ["없음", "바닐라", "시더우드"] },
+                winter: { top: ["없음", "소나무", "백합"], middle: ["없음", "시나몬", "아이리스"], base: ["없음", "앰버", "파촐리"] }
+            };
+
+            const water = document.getElementById("water");
+            const mainScent = document.getElementById("mainScent");
+            const topNotes = document.getElementById("topNotes");
+            const middleNotes = document.getElementById("middleNotes");
+            const baseNotes = document.getElementById("baseNotes");
+            const resetButton = document.getElementById("resetButton");
+            const scentDisplay = document.getElementById("scentDisplay");
+
+            const gradients = {
+                spring: "linear-gradient(to top, #ffb6c1, #ff69b4)",
+                summer: "linear-gradient(to top, #87ceeb, #1e90ff)",
+                autumn: "linear-gradient(to top, #ff8c00, #8b4513)",
+                winter: "linear-gradient(to top, #dda0dd, #9370db)"
+            };
+
+            const buttonColors = {
+                spring: "#ff69b4",
+                summer: "#1e90ff",
+                autumn: "#8b4513",
+                winter: "#9370db"
+            };
+
+            function updateWaterColor() {
+                water.style.background = gradients[mainScent.value];
+                resetButton.style.backgroundColor = buttonColors[mainScent.value];
+            }
+
+            function updateWaterLevel() {
+                let waterLevel = 0;
+                if (topNotes.selectedIndex > 0) waterLevel += 35;
+                if (middleNotes.selectedIndex > 0) waterLevel += 35;
+                if (baseNotes.selectedIndex > 0) waterLevel += 40;
+                
+                water.style.height = waterLevel + "%";
+            }
+
+            function updateNotes(selectedScent) {
+                if (!scentData[selectedScent]) return;
+                topNotes.innerHTML = scentData[selectedScent].top.map(s => `<option value="${s}">${s}</option>`).join("");
+                middleNotes.innerHTML = scentData[selectedScent].middle.map(s => `<option value="${s}">${s}</option>`).join("");
+                baseNotes.innerHTML = scentData[selectedScent].base.map(s => `<option value="${s}">${s}</option>`).join("");
+                updateScentDisplay();
+                updateWaterColor();
+            }
+
+            function updateScentDisplay() {
+                updateWaterLevel();
+                const topText = topNotes.value !== "없음" ? `탑 노트: ${topNotes.value}` : "";
+                const middleText = middleNotes.value !== "없음" ? `미들 노트: ${middleNotes.value}` : "";
+                const baseText = baseNotes.value !== "없음" ? `베이스 노트: ${baseNotes.value}` : "";
+                scentDisplay.innerHTML = [topText, middleText, baseText].filter(Boolean).join("<br>") || "선택된 향이 없습니다.";
+            }
+
+            function sendDataToServer() {
+                const data = {
+                    mainScent: mainScent.value,
+                    topNotes: topNotes.value,
+                    middleNotes: middleNotes.value,
+                    baseNotes: baseNotes.value
+                };
+            }
+
+            mainScent.addEventListener("change", function() {
+                updateNotes(this.value);
+                water.style.height = "0%";
+            });
+
+            resetButton.addEventListener("click", function() {
+                updateNotes(mainScent.value);
+                water.style.height = "0%";
+            });
+
+            [topNotes, middleNotes, baseNotes].forEach(select => {
+                select.addEventListener("change", updateScentDisplay);
+            });
+
+            updateNotes("spring");
+            water.style.height = "0%";
+        });
+    </script>
+</body>
+</html>

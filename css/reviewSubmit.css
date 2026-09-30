@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.body {
+font-family: 'BookkMyungjo-Bd', serif;
+}
+
+form {
+  width: 410px;
+  height: 730px;
+}
+.product-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #858585;
+  padding-bottom: 20px;
+  width: 370px;
+  margin-left: 20px;
+  margin-top:20px;
+}
+.product-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  margin-right: 55px;
+  object-fit: cover;
+}
+.product-info {
+  flex-grow: 1;
+}
+.product-name {
+  font-size: 14px;
+  line-height: 34px;
+  font-weight: bold;
+}
+.product-desc {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.product-price {
+  font-size: 18px;
+  line-height: 150%;
+
+}
+.original-price {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.discount {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.sale-end {
+  margin-top: 9px;
+  font-size: 15px;
+  color: #333;
+}
+
+.h4{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.p{
+  font-size: 24px;
+  color:#858585 ;
+}
+
+.review-stars{
+  display: flex;
+
+}
+#rating-value{
+font-size: 18px;
+margin-left: 30px;
+font-weight: bold;
+margin-top:10px;
+margin-bottom:10px;
+}
+.stars {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  margin-left: 88px;
+}
+.stars span {
+  font-size: 18px;
+  color: #ccc;
+  margin-top:10px;
+  transition: color 0.5s ease-in-out;
+  
+  }
+
+.stars span.active {
+  color: #FF0000;
+}
+
+.options button {
+  font-size: 13px;
+  width: 120px;
+  height: 46px;
+  background: white;
+  cursor: pointer;
+  text-align: center;
+  flex: 1;
+  border: 0px;
+  margin-bottom:10px;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.options button:hover {
+  background: #f0f0f0;  /* 연한 회색 */
+  color: black;
+}
+
+.options button:nth-child(1){
+border: 2px solid #f0f0f0;
+margin-left: 20px;
+}
+.options button:nth-child(2){
+border: 2px solid #f0f0f0;
+  }
+  .options button:nth-child(3){
+
+    border: 2px solid #f0f0f0;
+    }
+
+.options button.selected {
+  background: #f0f0f0;
+  color: black;
+}
+textarea {
+  width: 90%;
+  height: 142px;
+  margin-top: 5px;
+  padding: 24px;
+  border-radius: 18px;
+  border:2px solid #ccc;
+  resize: none;
+  font-size: 14px;
+  margin-left:20px;
+}
+textarea::placeholder{
+  font-size: 12px;
+  color: #858585;
+}
+
+.textarea-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#char-counter {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 15px;
+  color: #858585;
+}
+
+.bottom-row{
+  display: flex;
+  justify-content: center;
+}
+.submit-btn {
+  display: block;
+  width: 146px;
+  height: 48px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  
+}
+.submit-btn:nth-child(1){
+background-color: #9A9A9A;
+color: #ffffff;
+font-weight: bold;
+  font-size: 18px;
+margin-right: 12px;
+}
+.submit-btn:nth-child(2){
+  background-color: #E8EAEC;
+  font-weight: bold;
+  font-size: 18px;
+  color: #484848;
+}
+
+.submit-btn:nth-child(1):hover {
+  background-color: #7a7a7a; 
+  color: #ffffff;
+}
+
+.submit-btn:nth-child(2):hover {
+  background-color: #cfd2d6; 
+  color: #333;
+}
+
+.submit-btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}

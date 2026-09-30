@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 100%;
+	font-family: 'BookkMyungjo-Bd', serif;
+
+	
+}
+
+.sidebar {
+    top: 100px;
+    width: 300px;
+    margin-right: 54px;
+    height: fit-content;
+    position: sticky;     
+    margin-left: 130px;
+}
+
+.filters-box {
+    width: 295px;
+    height: 46px;
+    background-color: #F6F6F6;
+    border: 1px solid #E5E7EB;
+}
+
+[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    accent-color: black;
+    margin-right: 10px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.category-list li {
+    background-color: #ffffff;     
+    border: 1px solid #E5E7EB;  
+    width: 296px;
+    height: 44px;      
+    padding: 12px;                 
+    margin-bottom: 15px;            
+    border-radius: 4px;             
+    transition: background 0.3s;    
+    cursor: pointer;                
+}
+
+.category-list label {
+    width: 296px;
+    height: 44px; 
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.category-list li:hover {
+    background-color: #E5E7EB;      
+    box-shadow: 0 4px 8px #E5E7EB; 
+}
+
+.search-box {
+    margin-top: 15px;
+    width: 296px;             
+    height: 40px;              
+    padding: 10px 12px;       
+    font-size: 16px;
+    background-color: #F3F4F6;            
+    border: 1px solid #E5E7EB;   
+    border-radius: 4px;         
+    outline: none;           
+    transition: all 0.3s ease;
+    margin-bottom: 12px;  
+    color: #808894;
+}
+
+
+.search-box:focus {
+    border-color: #666;              
+    background-color: #f9f9f9;      
+}
+
+
+.search-box::placeholder {
+    color: #aaa;          
+    font-size: 18px;
+}
+
+.product-list {
+    display: grid;
+	width: 1350px;
+    grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개 */
+    gap: 0px; /* 간격 조정 */
+    justify-content: center;
+}
+
+.product-card {
+    background-color: white;
+    width: 310px;     
+    height: 460px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative;
+    margin-bottom: 48px;
+	border: 2px solid #000;
+	border-radius: 20px;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px); 
+}
+
+.product-image {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+	margin-left:13px;
+	margin-top:10px;	
+}
+
+.product-image-wrapper {
+    position: relative;  
+}
+
+
+.product-title {
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+    font-weight: bolder;
+    margin-top: 0px;
+    margin-bottom: 12px;
+	margin-left:15px;
+}
+
+.product-description {
+    font-size: 16px;
+    line-height: 16px;
+    color: #666;
+    margin-bottom: 20px;
+	margin-left:15px;
+}
+
+.product-price {
+    font-size: 20px;
+    line-height: 20px;
+    color: #333;
+    font-weight: bold;
+	margin-left:15px;
+}
+section {
+    padding-bottom: 40px;
+}
+
+.ad-box {
+    width: 1670px;
+    height: 450px;
+    background-image: url(../image/ad.jpg);
+    margin-left: 130px;
+    margin-right: 150px;   
+    margin-bottom: 150px;
+    overflow: hidden;
+    background-size: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        margin: 0 ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .filters-box {
+        position: static;
+    }
+    .product-list {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    .product-card{
+        width: 180px;     
+        height: 340px;
+    }
+    .product-image {
+        width: 180px;
+        height: 250px;
+        object-fit: cover; 
+    }
+    .product-title {
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 12px;
+    }
+    
+    .product-description {
+        font-size: 14px;
+        line-height: 16px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+    .product-price {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .ad-box {
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 150px;
+        margin-right: 0;
+    }
+}

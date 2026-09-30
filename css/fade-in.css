@@ -1,0 +1,36 @@
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left, .fade-right {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+.fade-left {
+  transform: translateX(-50px);
+}
+
+.fade-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.fade-right {
+  transform: translateX(50px);
+}
+
+.fade-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}

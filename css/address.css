@@ -1,0 +1,60 @@
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* 세로 간격 추가 */
+}
+
+
+.form-row {
+  display: flex;
+  gap: 40px;
+}
+
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #D6D6D6;
+  font-size: 14px;
+}
+
+input:focus{
+  box-shadow: 4px 4px 13px rgba(242, 113, 144, 0.15); /* 빨간색 그림자 */
+}
+
+textarea {
+  width: 978px;
+  height: 110px;
+  padding: 20px;
+  border: 1px solid #d6d6d6;
+  font-size: 14px;
+  resize: none;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-footer label {
+  font-size: 14px;
+}
+
+.form-footer p{
+  color: #333;
+  border: none;
+  font-size: 14px;
+}
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    border-radius: 4px;
+}

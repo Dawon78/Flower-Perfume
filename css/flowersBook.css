@@ -1,0 +1,667 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'BookkMyungjo-Bd', serif;
+  margin: 0 auto;
+  background-image: url("../image/allback.png");
+  max-width: 1920px;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container { 
+  width: 100%;
+}
+
+.container2 {
+  display: flex;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  height: fit-content;
+  position: sticky;     
+  margin-left: 130px;
+}
+
+.main_banner {
+  display: flex;
+  height: 900px;
+  width: 100%;
+  background-image: url('../image/flowerBook_main_img.png');
+  background-size: cover;
+   background-position: top 400px;
+  background-repeat: no-repeat;
+}
+.allback {
+    background: url('../image/allback.png') no-repeat;
+    background-size: cover;
+  }
+
+
+.flowers{
+  position: relative;
+}
+
+.flower-title{
+  margin-top: 67px;
+  margin-bottom: 48px;
+  font-size: 22px;
+  text-align: center;
+  align-items: center;
+  line-height: 70px;
+}
+.flowers .h2 {
+  font-size: 50px;
+  margin-left: 152px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.flowers .clickp {
+  font-size:35px;
+  margin-left: 152px;
+  margin-bottom: 70px;
+  font-weight: bold;
+  color:#616161;
+  }
+
+.flowers .slider-container {
+  display: flex;
+  position: relative;
+  width: 1622px;
+  height: 420px;
+  margin: 0 auto;
+  overflow: hidden;
+  gap:20px;
+  scroll-behavior: smooth;
+}
+.flowers .card:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.flowers .slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+    overflow-x: auto; 
+  width: 100%;
+  user-select: none; 
+
+}
+
+.slider-wrapper.dragging {
+  cursor: pointer;
+}
+
+.flowers .slider {
+  display: flex;
+  gap: 43px;
+  overflow-x: auto;
+  padding: 10px;
+  padding-left: 33px;
+  scroll-behavior: smooth;
+}
+
+.flowers .card {
+  width: 280px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+
+.flowers .title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+
+.season-filter {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.season-filter button {
+  padding: 25px 190px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #fff;
+}
+
+.season-filter .spring {
+  background-color: rgba(222, 163, 163, 0.3);
+}
+.season-filter .summer {
+  background-color: rgba(237, 220, 121, 0.3);
+}
+.season-filter .autumn {
+  background-color: rgba(194, 137, 68, 0.3);
+}
+.season-filter .winter {
+  background-color: rgba(68, 139, 193, 0.3);
+}
+
+.season-filter .spring:hover {
+  background-color: rgba(222, 163, 163, 0.8);
+}
+.season-filter .summer:hover {
+  background-color: rgba(237, 220, 121, 0.8);
+}
+.season-filter .autumn:hover {
+  background-color: rgba(194, 137, 68, 0.8);
+}
+.season-filter .winter:hover {
+  background-color: rgba(68, 139, 193, 0.8);
+}
+
+.slider-container {
+    width: 100%;
+    overflow-x: hidden; 
+    position: relative;
+	overflow-x: auto;
+}
+
+.slider-wrapper::-webkit-scrollbar {
+  height: 3px;
+}
+
+.slider-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.slider-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(200, 150, 200, 0.6);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.slider-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 150, 200, 0.9);
+}
+
+
+.content1 {
+  display: flex;
+  max-width: 1701px;
+  height:  700px;
+  padding: 40px;
+  margin: 0px auto;
+}
+
+.content1 .image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  flex: 1;
+}
+
+.large-image{
+  width: 100%;
+  height: 900px;
+  display: inline-flex;
+ }
+ 
+ .large-image1{
+   width: 470px;
+   height: 570px;
+   margin-right: 40px;
+   overflow: hidden;
+      box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+   
+ }
+  .large-image1 img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   
+ }
+ .large-image2{
+ width: 250px;
+ height: 290px;
+ margin-bottom: 30px;
+ overflow: hidden;
+ object-fit: cover;
+ box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+ }
+   .large-image2 img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   
+ }
+ .large-image3{
+ width: 250px;
+ height: 250px;
+ overflow: hidden;
+ object-fit: cover;
+ box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+ }
+   .large-image3 img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   
+ }
+
+.content1 .text-section {
+  flex: 1;
+  padding-left: 0px;
+  width: 600px;
+  padding-top: 40px;
+}
+
+.text-section h2 {
+  width: 700px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom:20px;
+  margin-left:0px;
+  margin-top:0px;
+}
+
+
+.text-section p {
+  font-size: 20px;
+  color: #666666;
+  line-height: 1.4;
+  margin-top: 30px;
+  margin-left:0px;
+  margin-bottom:30px;
+}
+
+/* 버튼 스타일 */
+.product-button {
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: transparent;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.product-button:hover {
+  background: black;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.flower-row {
+  display: flex;
+  flex-wrap: wrap; /* 화면 작으면 줄 바꿈 허용 */
+}
+
+.flower-image img {
+  width: 445px;
+  height: 400px;
+}
+
+
+.flower-text {
+  font-family: 'BookkMyungjo-Bd', serif;
+  color:black;
+  width: 718px;
+  position: relative;
+  text-align: center;
+}
+
+.hashtag-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+
+.hashtag {
+  font-family: 'BookkMyungjo-Bd', serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 110px;
+}
+
+.flower-name {
+  font-family: 'BookkMyungjo-Bd', serif;
+  font-size: 35px;
+  margin-left: 0px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #EB8BB4;
+}
+
+.flower-meaning{
+  font-family: 'BookkMyungjo-Bd', serif;
+  font-size: 28px;
+  font-weight: bold;
+
+}
+
+.content3 {
+  margin-left: 100px;
+}
+
+.product-section {
+  max-width: 1820px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+.section-header-p {
+  font-size: 25px;
+  font-weight: bold;
+  color: #222;
+  margin-top: 0px;
+  margin-bottom:30px;	
+  margin-left: 80px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.view-all {
+  background: transparent;
+  border: 1px solid black;
+  padding: 20px 60px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right:150px;
+  margin-top: 120px;
+}
+
+.view-all:hover {
+  background: black;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-wrapper {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* 상품 카드 */
+.product-card {
+  width: 400px;
+  height: 550px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  border-radius:50px;
+  padding: 30px;
+  margin-bottom: 60px;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); 
+}
+
+.product-card .img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+.product-card .img img {
+  width: 350px;
+  height: 350px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.product-in{
+  display: flex;
+  padding-top: 26px;
+}
+.product-title {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bolder;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.product-p{
+    text-align: center;
+}
+
+.product-description {
+  font-size: 16px;
+  color: #666;
+
+ padding-bottom:20px;
+  margin: 0;
+}
+.flex {
+   display:flex
+   }	
+.product-price {
+  font-size: 20px;
+  color: black;
+  margin: 0;
+  font-weight: bold;	
+}
+
+.season-label {
+  color:black;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main_banner {
+    height: auto;
+    min-height: 300px; 
+    background-size: contain;
+  }
+ 
+  .flower-title {
+    font-size: 16px;
+    padding: 0 24px;
+  }
+  .flowers .h2{
+    font-size: 40px;
+  }
+  .flowers .slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .flowers .slider {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+  }
+
+  .flowers .card {
+    width: 180px;
+    height: 260px;
+  }
+
+
+  .flowers .card:nth-child(n+3) {
+    display: none;
+  }
+  .product-card {
+    width: 100%;
+  }
+  .product-button {
+    width: 100%;
+  }
+  .content1 {
+    display: flex;
+    flex-direction: column;  
+    width: 100%;
+    padding: 0 24px; 
+  }
+
+  .content1 .image-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .large-image1 {
+    width: 280px;
+    height: 280px;
+    
+  }
+
+  .large-image2, .large-image3 {
+    width: 120px;
+    height: 120px;
+ 
+  }
+
+  .content1 .text-section {
+    width: 100%;  
+    padding-left: 0;  
+    padding-top: 0px;
+    text-align: center; 
+    
+    
+  }
+
+  .text-section h2 {
+    font-size: 24px;  
+    margin-bottom: 20px;  
+  }
+
+  .text-section p {
+    font-size: 14px;  
+    line-height: 1.6;
+    margin-top: 15px; 
+  }
+
+
+  .hashtag{
+    font-size: 24px;
+  }
+  .flower-name{
+    font-size: 24px;
+  }
+  .flower-meaning{
+    font-size: 18px;
+  }
+.content3{
+  margin: 0 24px;
+}
+  .section-header h2{
+    margin-left: 0;
+    font-size: 24px;
+  }
+  .header-buttons{
+    width: 40%;
+  }
+  .view-all{
+    font-size: 12px;
+  }
+
+  .slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    width: 100%; 
+
+  }
+
+  .product-card {
+    width: 100%; 
+    height: 300px;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .product-card .img {
+    width: 100%;
+    height: 180px; 
+    overflow: hidden; 
+  }
+
+  .product-card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  .product-card .product-in {
+    padding: 10px;
+ 
+  }
+
+  .product-card .product-title {
+    font-size: 14px; 
+    margin-bottom: 10px; 
+  }
+
+  .product-card .product-price {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.body {
+font-family: 'BookkMyungjo-Bd', serif;
+}
+
+#intro,
+#qna,
+#result {
+  max-width: 1920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.start {
+  background-color: #c4a484;
+  color: white;
+  font-size: 30px;
+  width: 354px;
+  height: 90px;
+  padding: 10px 24px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  
+}
+
+.start:hover {
+  background-color: #a3805d;
+  cursor: pointer;
+}

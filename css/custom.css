@@ -1,0 +1,409 @@
+main {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fafafa;
+  background-image: url(../image/cus_backimg.png);
+  background-size: 60%;
+  background-position:left bottom;
+  background-repeat: no-repeat;
+}
+
+.custom-page {
+
+  display: flex;
+  gap: 300px;
+}
+
+.left-panel {
+  width: 700px;
+  height: 600px;
+  
+}
+
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+h2{
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3{
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+.step ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step:nth-child(4) ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+
+.step li {
+border: none; 
+background: none;
+
+}
+.card {
+position: relative;
+width: 180px;
+height: 180px;
+transform-style: preserve-3d;
+transition: transform 0.8s;
+border-radius: 50%;
+border: 1px solid #b9b9b9;
+}
+
+.step li:hover .card {
+transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+box-sizing: border-box;
+cursor: pointer;
+}
+
+.card-front img {
+width: 30px;
+height: 30px;
+object-fit: cover;
+margin-bottom: 12px;
+}
+
+.card-back {
+transform: rotateY(180deg);
+padding: 10px;
+text-align: center;
+}
+.bg{
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+}
+
+/* tooltip 내용을 카드 안 중앙에 배치 */
+.tooltip {
+color: #000;
+font-size: 18px;
+line-height: 1.3;
+padding: 0 10px;
+max-width: 100%;
+cursor: pointer;
+}
+
+
+.step span{
+font-size: 18px;
+}
+
+.step li img {
+width: 80px;
+height: 80px;
+object-fit: cover;
+margin-bottom: 5px;
+transition: transform 0.3s ease;
+}
+
+
+.step:not(.step-final) li.selected {
+border: 3px solid #000;
+border-radius: 50%; 
+}
+
+.step-final li.selected {
+background:#fafafa;
+border-color: #424242;
+box-shadow: 0 6px 10px rgba(210, 214, 217, 0.3);
+border-radius: 20px; 
+}
+
+
+
+.prev-btn{
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.next-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.right-panel {
+display: flex;
+justify-content: center;  
+align-items: center;     
+
+}
+
+
+.right-panel .bottle {
+  position: relative;
+  width: 350px;
+  height: 600px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+
+}
+
+.fill {
+  position: absolute;
+  width: 100%;
+  transition: height 3s ease;
+  
+}
+
+.top-fill {
+  bottom: 0;
+  background: linear-gradient(to top, #9cc0ff, #ffffff00);
+  height: 0;
+  z-index: 3;
+}
+
+.middle-fill {
+  bottom: 0;
+  background: linear-gradient(to top,#9cc0ff97, #ffffff00);
+  height: 0;
+  z-index: 2;
+}
+
+.base-fill {
+  bottom: 0;
+  background: linear-gradient(to top, #9cc0ff8e, #a0f5f55f);
+  height: 0;
+  z-index: 1;
+}
+
+.volume-options li,
+.box-color-options li {
+  height: 70px;
+background: #fafafa;
+border: 2px solid #ccc;
+border-radius: 20px;
+padding: 20px;
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.box-color-options li:nth-child(1){
+  background-color: #f3f3f3;
+}
+.box-color-options li:nth-child(2){
+  background-color:  #f6f5ec;
+}
+.box-color-options li:nth-child(3){
+  background-color: #f3ece3;
+}
+.box-color-options li:nth-child(4){
+  background-color: #c8a19c;
+}
+.box-color-options li:nth-child(5){
+  background-color: #91766e;
+}
+
+.volume-options,
+.name-options {
+display: flex;
+gap: 20px;
+margin-bottom: 40px;
+}
+
+.name-options input{
+  background: #fafafa;
+border: 2px solid #ccc;
+border-radius: 20px;
+padding: 20px;
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.floating-flowers {
+position: relative; 
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.floating-flowers img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.floating-flowers img.drop-in {
+position: absolute;
+opacity: 0;
+transform: translateY(0);  /* 위치 초기화 */
+animation: float 5s ease-in-out infinite;  /* 부드러운 상하 움직임 */
+}
+
+@keyframes float {
+0% {
+transform: translateY(0) rotate(0deg);
+}
+50% {
+transform: translateY(-20px) rotate(15deg); /* 위로 떠오름 */
+}
+100% {
+transform: translateY(0) rotate(0deg);  /* 원래 위치로 돌아옴 */
+}
+}
+
+.right-line {
+position: absolute;
+top: 0;
+right: -30px; /* 병 오른쪽 외부에 선 배치 */
+width: 2px;
+background-color: black;
+height: 100%;
+text-align: left;
+font-size: 18px;
+margin-left: 10px;
+}
+
+.bottom-line {
+position: absolute;
+bottom: -30px; /* 병 아래쪽 외부에 선 배치 */
+left: 0;
+height: 2px;
+background-color: black;
+width: 100%;
+text-align: center;
+font-size: 18px;
+
+}
+.cm-value1{
+padding: 10px 10px;
+margin-top:275px;
+margin-left:2px;
+}
+
+.cm-value2{
+padding: 10px 10px;
+margin-top:-3px;
+}
+
+.right-line-value {
+top: 50%;
+right: -40px;
+}
+
+.bottom-line-value {
+bottom: -25px;
+left: 50%;
+transform: translateX(-50%);
+}
+.bottle-container {
+position: relative; /* 자식 absolute 위치 기준점 */
+width: 350px; /* 예시 크기 */
+margin: 0 auto;
+}
+.bottle-cap {
+position: absolute;
+top: -128px; /* 병 위에 올라오도록 조정 */
+left: 50%;
+transform: translateX(-50%);
+z-index: 2;
+width: 120px;
+height: 130px;
+border: 2px solid #555;
+border-radius: 12px;
+background:#fafafa;
+}
+
+.cap-image {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 120px; 
+height: 130px;
+z-index: 2;
+}
+
+
+.next-btn {
+width: 100px;
+
+border: 1px solid #222;
+color: #222;
+background-color: transparent;
+border-radius: 50px;
+font-size: 24px;
+transition: all 0.3s ease; 
+}
+
+.next-btn:hover {
+background-color: #222; 
+color: white; 
+cursor: pointer; 
+}
+
+.prev-btn {
+width: 100px;
+
+border: 1px solid #222;
+color: #222;
+background-color: transparent;
+border-radius: 50px;
+font-size: 24px;
+transition: all 0.3s ease;
+margin-right: 10px;
+}
+
+.prev-btn:hover {
+background-color: #222; 
+color: white;
+cursor: pointer; 
+}
